@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Rick and Morty</title>
+</head>
+<body onload="fetchAPI()">
+    <!-- Moares Oliveira -->
+    <div class="card hidden" data-tilt>
+        <h1 class="name" id="name">Rick Sanchez</h1>
+        <img src="https://rickandmortyapi.com/api/character/avatar/1.jpeg" alt="" class="profile">
+        <div class="info">
+            <p>
+                <div class="status">Alive</div>
+                <div class="species">Human</div>
+                <div class="gender">Male</div>
+            </p>
+            <div class="origin">Origin Location:&nbsp; <span>Earth (C-137)</span></div>
+        </div>
+    </div>
+    <div class="blurDiv hidden" onclick="hide()"></div>
+    <div class="container">
+        <button onclick="loadMore()">Load More</button>
+    </div>
+    <script src="js/tilt.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
