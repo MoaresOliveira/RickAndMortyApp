@@ -48,7 +48,7 @@ body .card {
           transform: perspective(1000px);
   -webkit-transform-origin: center;
           transform-origin: center;
-  position: absolute;
+  position: fixed;
   margin: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,8 +64,7 @@ body .card {
   border-radius: 15px;
   width: 350px;
   height: 476px;
-  top: 0;
-  left: 0;
+  top: 25%;
   -webkit-transform: translate(50%, 50%);
           transform: translate(50%, 50%);
   -webkit-box-orient: vertical;

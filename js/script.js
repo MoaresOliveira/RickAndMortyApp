@@ -7,15 +7,12 @@ const cardInfoStatus = card.querySelector(".info .status");
 const cardInfoSpecies = card.querySelector(".info .species");
 const cardInfoGender = card.querySelector(".info .gender");
 const cardInfoOrigin = card.querySelector(".info .origin span");
+const baseUrl = "https://rickandmortyapi.com/api/character"
 let next = "";
 
-document.body.addEventListener('click', ev => {
-    card.style.top = `${ev.clientY} !important`;
-    card.style.left = `${ev.clientX } !important`;
-})
 
 async function fetchAPI(page = null){
-    let reponse = await fetch(page ==null? "https://rickandmortyapi.com/api/character" : page);
+    let reponse = await fetch(page ==null? baseUrl : page);
     let objectJson = reponse.json();
     objectJson.then(json =>{
         thumbGenerator(json.results);
@@ -24,8 +21,7 @@ async function fetchAPI(page = null){
 }
 
 async function fetchCharacter(characterUrl){
-    let url = characterUrl.replaceAll(" ", "/")
-    let reponse = await fetch(url);
+    let reponse = await fetch(characterUrl);
     let objectJson = reponse.json();
     objectJson.then(json =>{
         showCard(json);
@@ -38,7 +34,7 @@ function loadMore(){
 
 function thumbGenerator(characterList){
     for(let i = 0; i < characterList.length; i++){
-        let item = `<div class="item" onclick="fetchCharacter('${characterList[i].url}')">
+        let item = `<div class="item" onclick="fetchCharacter('${baseUrl+"/"+characterList[i].id}')">
                         <img src="${characterList[i].image}" width="60" alt="Character ${characterList[i].name} from the show Rick and Morty" class="thumb">
                         <h3 class="name">${characterList[i].name}</h3>
                     </div> `
