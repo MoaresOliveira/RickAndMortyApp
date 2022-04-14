@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anybody&family=Rubik+Wet+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anybody&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -79,7 +79,6 @@ body .card:hover .name {
 }
 
 body .card .name {
-  font-family: 'Rubik Wet Paint', cursive;
   -webkit-transform: translateZ(20px);
           transform: translateZ(20px);
   text-align: center;
@@ -123,6 +122,23 @@ body .card .info .status {
   width: -moz-fit-content;
   width: fit-content;
   text-shadow: 1px 1px 5px #fff;
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+
+body .card .info .species {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+
+body .card .info .gender {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
+}
+
+body .card .info .origin {
+  -webkit-transform: translateZ(20px);
+          transform: translateZ(20px);
 }
 
 body .container {
@@ -142,8 +158,8 @@ body .container {
 body .container button {
   position: absolute;
   bottom: -80px;
-  left: 0;
-  right: 0;
+  left: 500px;
+  right: 500px;
   padding: 20px;
   background-color: #0b0;
   border-radius: 5px;
